@@ -17,7 +17,7 @@
 		}
 	%> --%>
 	
-	<a herf="Login.jsp">로그인</a>
+	<a href="login.jsp">로그인</a>
 	
 
 </body>
