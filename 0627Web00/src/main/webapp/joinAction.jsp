@@ -38,18 +38,11 @@
 		script.println("location.href='login_booot.jsp'");
 		script.println("</script>");
 	}
-	else if(result==0){	 //회원가입 실패시
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		script.println("alert('아이디가 이미 존재 합니다.')");
-		script.println("history.back()");	//뒤로가기
-		script.println("</script>");
-	}
 
-	else if(result==-2){	 //데이터베이스 오류
+	else if(result==-1){	 //데이터베이스 오류
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('데이터베이스에 문제가 발생했습니다.')");
+		script.println("alert('아이디가 이미 존재합니다.')");
 		script.println("history.back()");	//뒤로가기
 		script.println("</script>");
 	}else{

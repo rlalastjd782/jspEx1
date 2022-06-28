@@ -69,12 +69,12 @@ public class UserDAO {
 			pstmt.setString(2, user.getUserPassword());
 			pstmt.setString(3, user.getUserName());
 			pstmt.setString(4, user.getUserGender());
-			return pstmt.executeUpdate(); // 0또는 1
+			return pstmt.executeUpdate(); //정상이면 1
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace(); //중복발생이나 어떤이유로 예외가 발생하면 
 		}
-		return -1; // 데이터베이스 오류
+		return -1; // 중복발생
 	}
 
 }
