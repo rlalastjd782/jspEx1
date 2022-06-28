@@ -18,12 +18,16 @@
 	</c:forEach>
 	
 <!-- jstl el 을 이용하여 과일 리스트뽑기 -->
+<!-- 	c:set 변수설정 및 리스트 만들기 -->
 	<c:set var="fruits" value="{사과, 오렌지, 수박, 토마토}"></c:set>
+<!-- 	forEach를 이용한 반복문사용 -->
 	<c:forEach var="fruit" items="${fruits}">
 		<c:out value="${fruit} "></c:out>
 		<br>
 
 	</c:forEach>
+	
+<!-- jstl el을 이용하여  -->	
 
 
 </body>
