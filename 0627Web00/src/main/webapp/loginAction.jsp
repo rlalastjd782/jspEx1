@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "user.UserDAO" %>  <!-- DAO인스턴스 -->
 <%@ page import = "java.io.PrintWriter" %>  <!-- 출력 도와주는 객체 -->
-<% request.setCharacterEncoding("UTF-8"); %>
+<% request.setCharacterEncoding("UTF-8"); %> <!-- 스크립트릿  -->
 <jsp:useBean id="user" class="user.User" scope="page" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
