@@ -124,7 +124,7 @@
         </c:if>
         <!-- 세션이 비어있지 않을때만 로그아웃버튼 노출 -->
         <c:if test="${!empty sessionScope.userID }">
-        	<c:out value="${sessionScope.userID}"></c:out>
+        	<c:out value="${sessionScope.userID }" />
         	<button type="button" class="btn btn-primary" onclick="location.href='logoutAction.jsp'">로그아웃</button>
       	</c:if>
       </div>
