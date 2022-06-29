@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Headers · Bootstrap v5.2</title>
+    <title>헤더</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
@@ -115,9 +118,15 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" onclick="location.href='login_booot.jsp'">로그인</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='logoutAction.jsp'">로그아웃</button>
+      	<c:if test="${empty sessionScope.userID }">
+	        <button type="button" class="btn btn-outline-primary me-2" onclick="location.href='login_booot.jsp'">로그인</button>
+	        <button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
+        </c:if>
+        <!-- 세션이 비어있지 않을때만 로그아웃버튼 노출 -->
+        <c:if test="${!empty sessionScope.userID }">
+        	<c:out value="${sessionScope.userID}"></c:out>
+        	<button type="button" class="btn btn-primary" onclick="location.href='logoutAction.jsp'">로그아웃</button>
+      	</c:if>
       </div>
     </header>
   </div>
