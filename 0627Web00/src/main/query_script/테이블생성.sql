@@ -17,6 +17,16 @@ create table TABLE_USER(
 	primary key (userID)
 	
 );
+
+create table BBS(
+	bbsID INT,
+	bbsTitle VARCHAR(50),
+	writer VARCHAR(20),
+	crDate DATETIME,
+	bbsContent VARCHAR(2048),
+	bbsAvailable INT,
+	primary key(bbsID)
+);
 # 한개짜리 콤마가 문자열이다.
 insert into  TABLE_USER Values(
 	'test1','1234','홍길동','M');
