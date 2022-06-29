@@ -16,6 +16,7 @@ public class UserDAO {
 	// 생성자
 	public UserDAO() {
 		try {
+			//SQL URL
 			String dbURL = "jdbc:mysql://localhost:3306/JSP_TEST?serverTimezone=UTC";
 			// jdbc : Java DataBase Connectivity
 			String dbId = "root";

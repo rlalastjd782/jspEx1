@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- 	<%-- <div>hello 
+<%-- 	<div>hello 
 	
 	
 	world</div>
@@ -22,9 +22,11 @@
 	<%
 		}
 	
-	%>
-	 --%>
-	<a href="login_booot.jsp">로그인</a>
-	<a href="join.jsp">회원가입</a>
+	%> --%>
+	
+	<!-- 로그인이 되어있는상태에서는 로그인, 회원가입 버튼이 안보이도록
+	로그인이 안되었을때는 로그인, 회원가입 버튼이 보이도록 -->
+	<jsp:include page="header.html"></jsp:include>
+	
 </body>
 </html>

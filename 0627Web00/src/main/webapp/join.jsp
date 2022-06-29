@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ page import = "java.io.PrintWriter" %>  <!-- 출력 도와주는 객체 -->
 <!DOCTYPE html>
 
 <html>
@@ -24,6 +24,24 @@
 </head>
 
 <body>
+<%-- <%
+	//현재 로그인이 되어있는데 회원가입을 하면 로그인 되어있다고 알려주기
+	String userID = null;
+	if(session.getAttribute("userID") != null){	//세션의 userID가 비어있지않으면 가져오기
+		userID = (String)session.getAttribute("userID");
+	}
+	if(userID != null){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('이미 로그인이 되어있습니다.')");
+		script.println("location.href='index.jsp'");
+		script.println("</script>");
+	}
+%> --%>
+
+
+
+
 	<!-- 로긴폼 -->
 
 	<div class="container">
