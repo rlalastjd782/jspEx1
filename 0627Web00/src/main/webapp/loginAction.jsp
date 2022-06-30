@@ -6,7 +6,8 @@
 <jsp:useBean id="user" class="user.User" scope="page" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
-
+<jsp:setProperty name="user" property="userName" />
+<jsp:setProperty name="user" property="userGender" />
 <!-- jsp 에서 클래스의 setter함수를 호출한것과 마찬가지 -->
 <!DOCTYPE html>
 
