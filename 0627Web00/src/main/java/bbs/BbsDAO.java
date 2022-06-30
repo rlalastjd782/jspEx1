@@ -127,10 +127,11 @@ public class BbsDAO {
 			int startNum = nextNum - (pageNumber - 1)*10;
 			pstmt = conn.prepareStatement(SQL);
 			
+			System.out.println("startNum : "+startNum);
 			pstmt.setInt(1, startNum);	//해당페이지의 시작번호
 
 			rs =  pstmt.executeQuery(); //select문에 쓰는 함수
-			if(rs.next()) {
+			while(rs.next()) {
 				 Bbs bbs = new Bbs();
 				 bbs.setBbsID(rs.getInt(1));
 				 bbs.setBbsTitle(rs.getString(2));
@@ -145,13 +146,14 @@ public class BbsDAO {
 		} finally {
 			try {
 				if(pstmt!=null) {
+					System.out.println("getList에서 pstmt끄겠습니다.");
 					pstmt.close();
 				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
+		System.out.println("리스트 반환하겠습니다.");
 		return list;	//다쌓은 리스트를 반환
 	}
 
